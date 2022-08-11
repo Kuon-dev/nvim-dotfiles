@@ -1,9 +1,8 @@
 local cmp_status_ok, cmp = pcall(require, "cmp")
-if (not status) then return end
+if (not cmp_status_ok) then return end
 
 vim.opt.completeopt= { 'menuone' , 'noinsert' , 'noselect' }
 
-lua <<EOF
   local cmp = require'cmp'
   local lspkind = require'lspkind'
 
@@ -37,7 +36,7 @@ lua <<EOF
     }
   })
 
-  vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
+vim.cmd [[highlight! default link CmpItemKind CmpItemMenuDefault]]
 
 local tabnine = require('cmp_tabnine.config')
 tabnine:setup({
@@ -52,4 +51,3 @@ tabnine:setup({
 	};
 	show_prediction_strength = false;
 })
-EOF
