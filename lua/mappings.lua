@@ -50,14 +50,27 @@ keymap('n', '<C-w><up>', '<C-w>+')
 keymap('n', '<C-w><down>', '<C-w>-')
 
 -- Mappings for CoCList
-keymap('n', '<Leader>a', '<cmd>CocList diagnostics<cr>', coc_otps ) --show all diagnostics
-keymap('n', '<Leader>e', '<cmd>CocList extensions<cr>', coc_otps ) -- manage extensions
-keymap('n', '<Leader>c', '<cmd>CocList commands<cr>', coc_otps ) --  show commands
-keymap('n', '<Leader>o', '<cmd>CocList outline<cr>', coc_otps ) -- find symbol of current docsnnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr> 
-keymap('n', '<Leader>s', '<cmd>CocList -I symbols<cr>', coc_otps ) -- search workspace symbols
-keymap('n', '<Leader>j', '<cmd>CocNext <cr>', coc_otps ) -- next item
-keymap('n', '<Leader>k', '<cmd>CocPrev <cr>', coc_otps ) -- previous item
-keymap('n', '<Leader>p', '<cmd>CocListResume <cr>', coc_otps ) -- Resume latest coc list.
+keymap('n', '<Leader>a', '<cmd>CocList diagnostics<cr>', coc_opts ) --show all diagnostics
+keymap('n', '<Leader>e', '<cmd>CocList extensions<cr>', coc_opts ) -- manage extensions
+keymap('n', '<Leader>c', '<cmd>CocList commands<cr>', coc_opts ) --  show commands
+keymap('n', '<Leader>o', '<cmd>CocList outline<cr>', coc_opts ) -- find symbol of current docsnnoremap <silent><nowait> <space>o  :<C-u>CocList outline<cr> 
+keymap('n', '<Leader>s', '<cmd>CocList -I symbols<cr>', coc_opts ) -- search workspace symbols
+keymap('n', '<Leader>j', '<cmd>CocNext <cr>', coc_opts ) -- next item
+keymap('n', '<Leader>k', '<cmd>CocPrev <cr>', coc_opts ) -- previous item
+keymap('n', '<Leader>p', '<cmd>CocListResume <cr>', coc_opts ) -- Resume latest coc list.
+
+-- lsp saga
+keymap('n', '<C-j>', '<cmd>Lspsaga diagnostic_jump_next<CR>', term_opts)
+keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', term_opts)
+keymap('n', 'gp', '<cmd>Lspsaga preview_definition<CR>', term_opts)
+keymap('n', 'gr', '<cmd>Lspsaga rename<CR>', term_opts)
+-- nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
+-- nnoremap <silent> K <Cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
+-- inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>
+--
+-- nnoremap <silent> gh <Cmd>Lspsaga lsp_finder<CR>
+-- nnoremap <silent> gp <Cmd>Lspsaga preview_definition<CR>
+-- nnoremap <silent> gr <Cmd>Lspsaga rename<CR>-
 
 -- undo redo maps
 keymap('n', '<C-z>', 'u', opts)
@@ -72,7 +85,7 @@ keymap('c', '<C-y>', '<C-O><C-R>', opts)
 
 
 --   Bufferr tabs
-- Move to previous/next
+-- Move to previous/next
 keymap('n', '<A-,>', '<cmd>BufferPrevious<CR>', term_opts)
 keymap('n', '<A-.>', '<cmd>BufferNext<CR>', term_opts)
 -- Re-order to previous/next
