@@ -2,7 +2,7 @@
 
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
-local coc_opts = { silent = true, nowait = true }
+local coc_opts = { silent = true, nowait = true, noremap = true }
 
 local keymap = vim.api.nvim_keymap
 
@@ -18,23 +18,23 @@ vim.g.maplocalleader = " "
 --   term_mode = "t",
 --   command_mode = "c",
 
-keymap('n', 'x', '"_x')
+keymap('n', 'x', '"_x', opts)
 
 -- Increment/decrement
-keymap('n', '+', '<C-a>')
-keymap('n', '-', '<C-x>')
+keymap('n', '+', '<C-a>', opts)
+keymap('n', '-', '<C-x>', opts)
 
 -- Delete a word backwards
-keymap('n', 'dw', 'vb"_d')
+keymap('n', 'dw', 'vb"_d', opts)
 
 -- Select all
-keymap('n', '<C-a>', 'gg<S-v>G')
+keymap('n', '<C-a>', 'gg<S-v>G', opts)
 
 -- Windows
 
 -- Split window
-keymap('n', 'ss', ':split<Return><C-w>w')
-keymap('n', 'sv', ':vsplit<Return><C-w>w')
+keymap('n', 'ss', ':split<Return><C-w>w', opts)
+keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
 
 -- Move window
 keymap('n', '<Space>', '<C-w>w')
@@ -60,10 +60,10 @@ keymap('n', '<Leader>k', '<cmd>CocPrev <cr>', coc_opts ) -- previous item
 keymap('n', '<Leader>p', '<cmd>CocListResume <cr>', coc_opts ) -- Resume latest coc list.
 
 -- lsp saga
-keymap('n', '<C-j>', '<cmd>Lspsaga diagnostic_jump_next<CR>', term_opts)
-keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', term_opts)
-keymap('n', 'gp', '<cmd>Lspsaga preview_definition<CR>', term_opts)
-keymap('n', 'gr', '<cmd>Lspsaga rename<CR>', term_opts)
+keymap('n', '<C-j>', '<cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+keymap('n', 'gh', '<cmd>Lspsaga lsp_finder<CR>', opts)
+keymap('n', 'gp', '<cmd>Lspsaga preview_definition<CR>', opts)
+keymap('n', 'gr', '<cmd>Lspsaga rename<CR>', opts)
 -- nnoremap <silent>K <Cmd>Lspsaga hover_doc<CR>
 -- nnoremap <silent> K <Cmd>lua require('lspsaga.hover').render_hover_doc()<CR>
 -- inoremap <silent> <C-k> <Cmd>Lspsaga signature_help<CR>

@@ -14,7 +14,7 @@ if has("nvim")
   Plug 'pangloss/vim-javascript'
   Plug 'mxw/vim-jsx'
   Plug 'neovim/nvim-lspconfig'
-  Plug 'williamboman/nvim-lsp-installer'
+  " Plug 'williamboman/nvim-lsp-installer'
   Plug 'tami5/lspsaga.nvim'
   Plug 'folke/lsp-colors.nvim'
   Plug 'L3MON4D3/LuaSnip'
@@ -60,7 +60,7 @@ if has("nvim")
   " tabnine autocomplete, refer to the documentation for tabnine installation
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  Plug 'lambdalisue/glyph-palette.vim'
+  " Plug 'lambdalisue/glyph-palette.vim'
 
 "  Plug 'hrsh7th/cmp-nvim-lsp'
 "  Plug 'hrsh7th/cmp-buffer'
