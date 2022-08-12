@@ -43,19 +43,24 @@ db.custom_header = {
 [[ ░░░░░arrived░░░░░░░░░░░░█▀██████░░   ]],
 [[                                      ]],
 [[                                      ]],
+
 }
 
 db.custom_center = {
-    {icon = '  ',
-    desc = 'Recently latest session                  ',
+  {
+    icon = '',
+    desc = 'Recently latest session ',
     shortcut = 'SPC s l',
-    action ='SessionLoad'},
-    {icon = '  ',
-    desc = 'Recently opened files                   ',
+    action ='SessionLoad'
+  },
+  {
+    icon = '',
+    desc = 'Recently opened files ',
     action =  'DashboardFindHistory',
-    shortcut = 'SPC f h'},
+    shortcut = 'SPC f h'
+  },
 }
 
 db.custom_footer = {
-  {icon ='', desc='Sanae sama', action = ''}
+  'Sanae sama'
 }

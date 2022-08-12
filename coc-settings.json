@@ -1727,5 +1727,6 @@
   "diagnostic.messageTarget": "float",
   "diagnostic.separateRelatedInformationAsDiagnostics": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
-  "suggest.invalidInsertCharacters": ["(", "<", "{", "[", "\r", "\n"]
+  "suggest.invalidInsertCharacters": ["(", "<", "{", "[", "\r", "\n"],
+  "Lua.telemetry.enable": false
 }

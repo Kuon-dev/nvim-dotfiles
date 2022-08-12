@@ -1,5 +1,5 @@
 for _, source in ipairs {
-  "configs",
+ "configs",
   "plugins",
   "colorscheme",
   "highlights",

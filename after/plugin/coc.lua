@@ -1,5 +1,5 @@
-local status, coc = pcall(require, "coc")
-if (not status) then return end
+-- local status, coc = pcall(require, "coc.nvim")
+-- if (not status) then return end
 
 local keymap = vim.api.nvim_set_keymap
 local expr_opts = { noremap = true, silent = true, expr = true }
@@ -8,14 +8,11 @@ local expr = { expr = true, noremap = true}
 local silent = { silent = true, noremap = true }
 
 local fn = vim.fn
-function checkBackspace()
-	local col = fn.col('.') - 1
-	return col == 0 or fn.getline('.'):sub(col, col):match('%s') ~= nil
-end
 
 -- use CTRL-J and K to move on snippets and auto completion
 vim.g["coc_snippet_next"] = ""
 vim.g["coc_snippet_prev"] = ""
+
 keymap(
     "i",
     "<c-j>",
@@ -30,7 +27,7 @@ keymap(
     ,
     expr_opts
 )
---
+
 -- use CR to complete
 keymap(
   "i",
@@ -46,21 +43,22 @@ keymap("i", "<A-d>", [[coc#refresh()]], expr_opts)
 keymap(
   "i",
   "<TAB>",
-  [[coc#pum#visible() ? "\<C-n>" : CheckBackspace() ? "\<TAB> : coc#refresh() ]],
+  [[coc#pum#visible() ? coc#pum#next(1) : "\<TAB>" ]],
   expr_opts
 )
 
 keymap(
   'i',
   '<S-TAB>',
-  [[coc#pum#visible() ? "\<C-p>" : "\<C-h>"]]
+  [[coc#pum#visible() ? "\<C-p>" : "\<C-h>"]],
+  expr_opts
 )
 
 -- inoremap <silent><expr> <CR> pumvisible() ? coc#_select_confirm()
 --       \: "\<C-g>u\<CR>\<C-s>=coc#on_enter()\<CR>"
 
 
-keymap('n', '[g', '<Plug>(coc-diagnostic-prev)')
+keymap('n', '[g', '<Plug>(coc-diagnostic-prev)', opts)
 -- nmap <silent> [g <Plug>(coc-diagnostic-prev)
 -- nmap <silent> ]g <Plug>(coc-diagnostic-next)
  
