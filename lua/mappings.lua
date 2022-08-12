@@ -4,7 +4,7 @@ local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 local coc_opts = { silent = true, nowait = true, noremap = true }
 
-local keymap = vim.api.nvim_keymap
+local keymap = vim.api.nvim_set_keymap
 
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
@@ -37,17 +37,17 @@ keymap('n', 'ss', ':split<Return><C-w>w', opts)
 keymap('n', 'sv', ':vsplit<Return><C-w>w', opts)
 
 -- Move window
-keymap('n', '<Space>', '<C-w>w')
-keymap('', 'sh', '<C-w>h')
-keymap('', 'sk', '<C-w>k')
-keymap('', 'sj', '<C-w>j')
-keymap('', 'sl', '<C-w>l')
+keymap('n', '<Space>', '<C-w>w', opts)
+keymap('', 'sh', '<C-w>h', opts)
+keymap('', 'sk', '<C-w>k', opts)
+keymap('', 'sj', '<C-w>j', opts)
+keymap('', 'sl', '<C-w>l', opts)
 
 -- Resize window
-keymap('n', '<C-w><left>', '<C-w><')
-keymap('n', '<C-w><right>', '<C-w>>')
-keymap('n', '<C-w><up>', '<C-w>+')
-keymap('n', '<C-w><down>', '<C-w>-')
+-- keymap('n', '<C-w><left>', '<C-w><')
+-- keymap('n', '<C-w><right>', '<C-w>>')
+-- keymap('n', '<C-w><up>', '<C-w>+')
+-- keymap('n', '<C-w><down>', '<C-w>-')
 
 -- Mappings for CoCList
 keymap('n', '<Leader>a', '<cmd>CocList diagnostics<cr>', coc_opts ) --show all diagnostics

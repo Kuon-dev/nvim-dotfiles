@@ -1,5 +1,5 @@
 local Plug = vim.fn[('plug#')]
-vim.call(('plug#begin', '~/.config/nvim/plugged'))
+vim.call('plug#begin', '~/.config/nvim/plugged')
 
 Plug ('tpope/vim-fugitive')
 Plug (('tpope/vim-rhubarb'))
@@ -9,7 +9,7 @@ Plug ('neovim/nvim-lspconfig')
 Plug ('tami5/lspsaga.nvim')
 Plug ('folke/lsp-colors.nvim')
 Plug ('L3MON4D3/LuaSnip')
-Plug ('nvim-treesitter/nvim-treesitter', ({ ['do'] = vim.cmd['TSUpdate'] }))
+Plug ('nvim-treesitter/nvim-treesitter', ({['do']  = vim.fn['TSUpdate']}))
 Plug ('kyazdani42/nvim-web-devicons')
 Plug ('onsails/lspkind-nvim')
 Plug ('nvim-lua/popup.nvim')
@@ -38,7 +38,7 @@ Plug ('ayu-theme/ayu-vim')
 Plug ('navarasu/onedark.nvim')
 Plug ('lilydjwg/colorizer')
 
-Plug ('glepnir/dashboard-nvim')
+-- Plug ('glepnir/dashboard-nvim')
 
 Plug ('romgrk/barbar.nvim') -- better tabs
 
@@ -49,14 +49,14 @@ Plug ('luochen1990/rainbow')
 --others 
 
 -- tabnine autocomplete, refer to the documentation for tabnine installation
-Plug ('neoclide/coc.nvim', {'branch': 'release'})
+Plug ('neoclide/coc.nvim', ({['branch'] = 'release'}))
 
 Plug ('lambdalisue/glyph-palette.vim')
 
 --  Plug ('hrsh7th/cmp-nvim-lsp')
 --  Plug ('hrsh7th/cmp-buffer')
---  Plug ('hrsh7th/nvim-cmp')
---  Plug ('tzachar/cmp-tabnine', { 'do': '. ./install.ps1') }
+-- Plug ('hrsh7th/nvim-cmp')
+-- Plug ('tzachar/cmp-tabnine', ({ ['do'] = vim.fn['powershell ./install.ps1'] }))
 
 -- fuzzy finder 
 Plug ('junegunn/fzf', ({['do'] = vim.fn['fzf#install']}))
