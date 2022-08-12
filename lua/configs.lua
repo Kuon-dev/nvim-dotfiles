@@ -6,16 +6,24 @@ cmd("autocmd!")
 local options = {
   fileencoding = 'utf-8',
   encoding = 'utf-8',
+
   number = true,
   title = true,
+  mouse = 'a',
+
+  -- coc
+  hidden = true,
   backup = false,
   writebackup = false,
+  updatetime = 300,
+
   hlsearch = true,
   cmdheight = 2,
   laststatus = 2,
   scrolloff=10,
   expandtab = true,
   autochdir = false,
+
   backupskip = { '/tmp/*', '/private/tmp/*' },
   backspace = { 'start', 'eol', 'indent' },
   completeopt= { 'menu' , 'menuone' , 'noselect' },
@@ -24,16 +32,15 @@ local options = {
   ignorecase = true,
 
   autoindent = true,
+  smartindent = true,
   shiftwidth = 2,
   tabstop =2 ,
   smarttab = true,
   showcmd = true,
-  hidden = true,
 
   foldmethod = 'indent',
   foldenable = false,
 
-  updatetime= 300,
   signcolumn = 'yes',
 }
 
@@ -43,7 +50,7 @@ end
 
 set.wildignore:append {'*/node_modules/*'}
 set.clipboard:prepend { 'unnamed', 'unnamedplus' }
-
+set.shortmess:append { I = true }
 set.formatoptions:append {'r'}
 set.path:append {'**'}
 -- set.shortmess:append {'C'}

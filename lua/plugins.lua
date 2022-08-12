@@ -38,7 +38,7 @@ Plug ('ayu-theme/ayu-vim')
 Plug ('navarasu/onedark.nvim')
 Plug ('lilydjwg/colorizer')
 
--- Plug ('glepnir/dashboard-nvim')
+Plug ('glepnir/dashboard-nvim')
 
 Plug ('romgrk/barbar.nvim') -- better tabs
 
@@ -46,7 +46,6 @@ Plug ('romgrk/barbar.nvim') -- better tabs
 Plug ('leafOfTree/vim-vue-plugin')
 Plug ('posva/vim-vue')
 Plug ('luochen1990/rainbow')
---others 
 
 -- tabnine autocomplete, refer to the documentation for tabnine installation
 Plug ('neoclide/coc.nvim', ({['branch'] = 'release'}))
