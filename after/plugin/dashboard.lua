@@ -1,3 +1,5 @@
+local status, dashboard = pcall(require, "dashboard")
+if (not status) then return end
 
 local db = require('dashboard')
 --  db.custom_header={
