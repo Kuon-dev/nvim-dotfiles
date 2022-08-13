@@ -62,5 +62,5 @@ db.custom_center = {
 }
 
 db.custom_footer = {
-  'Sanae sama'
+  'Thank you for choosing me'
 }
