@@ -48,9 +48,17 @@ keymap(
 )
 
 keymap(
+  "i",
+  "<Bs>",
+  [[coc#pum#visible() ? coc#pum#next(1) : "\<Bs>" ]],
+  expr_opts
+)
+
+
+keymap(
   'i',
   '<S-TAB>',
-  [[coc#pum#visible() ? "\<C-p>" : "\<C-h>"]],
+  [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]],
   expr_opts
 )
 
@@ -61,7 +69,7 @@ keymap(
 keymap('n', '[g', '<Plug>(coc-diagnostic-prev)', opts)
 -- nmap <silent> [g <Plug>(coc-diagnostic-prev)
 -- nmap <silent> ]g <Plug>(coc-diagnostic-next)
- 
+
 -- -- GoTo code navigation.
 -- nmap <silent> gd <Plug>(coc-definition)
 -- nmap <silent> gy <Plug>(coc-type-definition)

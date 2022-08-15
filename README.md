@@ -3,6 +3,10 @@ This is my personal dotfiles for my Neovim setup.
 
 ---
 
+## Features 
+
+---
+
 ## Prerequisites
 These are the packages that are required for this project.
 - Git
@@ -16,14 +20,14 @@ If you are using linux, any package manager will do as long as it contains the r
 
 For example:
 
-Windows:
+#### Windows:
 
 ```bash
 scoop install git
 chocolatey install git
 ```
 
-MacOS / Linux :
+#### MacOS / Linux :
 
 ```bash
 brew install git 
@@ -32,24 +36,24 @@ brew install git
 ---
 
 ## Getting started
-1. Go to the root directory where you will be putting your nvim scripts on.
+#### 1. Go to the root directory where you will be putting your nvim scripts on.
 Example:
 - `C:/Users/User/AppData/Local/` (Windows)
 - `~/.config/`
 
-2. Create a new folder called "nvim"
+#### 2. Create a new folder called "nvim"
 ```bash
 mkdir nvim
 ```
 
-3. Clone this project in the nvim directory
+#### 3. Clone this project in the nvim directory
 
 ```bash
 cd nvim
 git clone https://github.com/Kuon-dev/nvim-dotfiles.git .
 ```
 
-4. Install vim plug
+#### 4. Install vim plug
 
 Unix / Linux
 ```bash
@@ -77,4 +81,5 @@ type `:q` then start nvim again by typping `nvim`. I recommed setting up an Alia
 
 ---
 
-## Features
+## License
+

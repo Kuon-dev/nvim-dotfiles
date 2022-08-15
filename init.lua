@@ -11,3 +11,7 @@ for _, source in ipairs {
   end
 end
 
+require('lsp.lspconfig')
+require('lsp.lspsaga')
+require('lsp.lsp-installer')
+
