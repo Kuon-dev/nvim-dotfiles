@@ -97,6 +97,24 @@ local plugins = {
     config = function()
       require "plugins.configs.mason"
     end,
+    ensure_installed = {
+      -- lua stuff
+      "lua-language-server",
+      "stylua",
+
+      -- web dev
+      "css-lsp",
+      "html-lsp",
+      "typescript-language-server",
+      "deno",
+      "emmet-ls",
+      "json-lsp",
+      "vetur-vls",
+
+      -- shell
+      "shfmt",
+      "shellcheck",
+    },
   },
 
   ["neovim/nvim-lspconfig"] = {
@@ -106,8 +124,11 @@ local plugins = {
     end,
     config = function()
       require "plugins.configs.lspconfig"
+      require "custom.plugins.lspconfig"
     end,
   },
+
+
 
   -- load luasnips + cmp related in insert mode only
 

@@ -17,9 +17,13 @@ M.general = {
     ["<C-l>"] = { "<Right>", "move right" },
     ["<C-j>"] = { "<Down>", "move down" },
     ["<C-k>"] = { "<Up>", "move up" },
+
+    ["<C-z>"] = { "<cmd> u <CR>", "undo" },
   },
 
   n = {
+
+    ["<C-z>"] = { "<cmd> u <CR>", "undo" },
     ["<ESC>"] = { "<cmd> noh <CR>", "no highlight" },
 
     -- switch between windows
@@ -72,6 +76,9 @@ M.general = {
   t = { ["<C-x>"] = { termcodes "<C-\\><C-N>", "escape terminal mode" } },
 
   v = {
+      
+    ["<C-z>"] = { "<cmd> u <CR>", "undo" },
+
     ["j"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', opts = { expr = true } },
     ["k"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', opts = { expr = true } },
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', opts = { expr = true } },
@@ -259,7 +266,7 @@ M.nvimtree = {
 
   n = {
     -- toggle
-    ["<C-n>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
+    ["<C-p>"] = { "<cmd> NvimTreeToggle <CR>", "toggle nvimtree" },
 
     -- focus
     ["<leader>e"] = { "<cmd> NvimTreeFocus <CR>", "focus nvimtree" },
@@ -271,13 +278,13 @@ M.telescope = {
 
   n = {
     -- find
-    ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "find files" },
-    ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "find all" },
-    ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
-    ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
-    ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "help page" },
-    ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
-    ["<leader>tk"] = { "<cmd> Telescope keymaps <CR>", "show keys" },
+    [";f"] = { "<cmd> Telescope find_files <CR>", "find files" },
+    [";a"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "find all" },
+    [";r"] = { "<cmd> Telescope live_grep <CR>", "live grep" },
+    [";b"] = { "<cmd> Telescope buffers <CR>", "find buffers" },
+    [";h"] = { "<cmd> Telescope help_tags <CR>", "help page" },
+    [";o"] = { "<cmd> Telescope oldfiles <CR>", "find oldfiles" },
+    [";k"] = { "<cmd> Telescope keymaps <CR>", "show keys" },
 
     -- git
     ["<leader>cm"] = { "<cmd> Telescope git_commits <CR>", "git commits" },
